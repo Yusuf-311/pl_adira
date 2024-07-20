@@ -1,0 +1,1879 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Around | Food Blog</title>
+    <!-- SEO Meta Tags-->
+    <meta
+      name="description"
+      content="Around - Multipurpose Bootstrap Template"
+    />
+    <meta
+      name="keywords"
+      content="bootstrap, business, consulting, coworking space, services, creative agency, dashboard, e-commerce, mobile app showcase, multipurpose, product landing, shop, software, ui kit, web studio, landing, html5, css3, javascript, gallery, slider, touch, creative"
+    />
+    <meta name="author" content="Createx Studio" />
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab.svg" />
+    <meta name="msapplication-TileColor" content="#766df4" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- Page loading styles-->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all 0.4s 0.2s ease-in-out;
+        transition: all 0.4s 0.2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-family: "Inter", sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #737491;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: 0.75rem;
+        vertical-align: text-bottom;
+        border: 0.15em solid #766df4;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner 0.75s linear infinite;
+        animation: spinner 0.75s linear infinite;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          var preloader = document.querySelector(".page-loading");
+          preloader.classList.remove("active");
+          setTimeout(function () {
+            preloader.remove();
+          }, 2000);
+        };
+      })();
+    </script>
+    <!-- Vendor Styles-->
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="vendor/simplebar/dist/simplebar.min.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="vendor/tiny-slider/dist/tiny-slider.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="vendor/lightgallery.js/dist/css/lightgallery.min.css"
+    />
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="css/theme.min.css" />
+  </head>
+  <!-- Body-->
+  <body class="is-sidebar">
+    <!-- Page loading spinner-->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div>
+        <span>Loading...</span>
+      </div>
+    </div>
+    <main class="page-wrapper">
+      <!-- Navbar (Solid background + shadow)-->
+      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
+      <header
+        class="header navbar navbar-expand-lg bg-warning navbar-shadow navbar-sticky"
+        data-scroll-header
+      >
+        <div class="navbar-search bg-light">
+          <div class="container d-flex flex-nowrap align-items-center">
+            <i class="ai-search fs-xl"></i>
+            <input
+              class="form-control form-control-xl navbar-search-field"
+              type="text"
+              placeholder="Search site"
+            />
+            <div class="d-flex align-items-center">
+              <span class="text-muted fs-xs d-none d-sm-inline">Close</span>
+              <button
+                class="btn-close p-2"
+                type="button"
+                data-bs-toggle="search"
+              ></button>
+            </div>
+          </div>
+        </div>
+        <div class="container px-0 px-xl-3">
+          <button
+            class="navbar-toggler ms-n2 me-4"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#primaryMenu"
+          >
+            <span class="navbar-toggler-icon"></span></button
+          ><a
+            class="navbar-brand flex-shrink-0 order-lg-1 mx-auto ms-lg-0 pe-lg-2 me-lg-4"
+            href="index.html"
+            ><img
+              class="d-none d-lg-block"
+              src="images/logo adira.png"
+              alt="Around"
+              width="153" /><img
+              class="d-lg-none"
+              src="images/logo adira.png"
+              alt="Around"
+              width="58"
+          /></a>
+          <div class="d-flex align-items-center order-lg-3 ms-lg-auto">
+            <div class="navbar-tool">
+              <a
+                class="navbar-tool-icon-box me-lg-2"
+                href="#"
+                data-bs-toggle="search"
+                ><i class="ai-search"></i
+              ></a>
+            </div>
+            <div
+              class="d-lg-block d-none border-start me-4"
+              style="height: 30px"
+            ></div>
+            <div class="d-lg-block d-none text-nowrap">
+              <a class="btn-social bs-outline bs-facebook me-2" href="#"
+                ><i class="ai-facebook"></i></a
+              ><a class="btn-social bs-outline bs-twitter me-2" href="#"
+                ><i class="ai-twitter"></i></a
+              ><a class="btn-social bs-outline bs-instagram me-2" href="#"
+                ><i class="ai-instagram"></i></a
+              ><a class="btn-social bs-outline bs-pinterest" href="#"
+                ><i class="ai-pinterest"></i
+              ></a>
+            </div>
+          </div>
+          <div class="offcanvas offcanvas-collapse order-lg-2" id="primaryMenu">
+            <div class="offcanvas-header navbar-shadow">
+              <h5 class="mt-1 mb-0">Menu</h5>
+              <button
+                class="btn-close lead"
+                type="button"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body"></div>
+          </div>
+        </div>
+      </header>
+      <!-- Page content-->
+      <!-- Hero-->
+      <section
+        class="container-fluid"
+        style="
+          background-image: url(images/adira_banner.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: top;
+          height: 50vh;
+        "
+      >
+        <button
+          class="btn btn-warning rounded-2"
+          style="margin-top: 230px; margin-left: 80px"
+        >
+          Ajukan Sekarang
+        </button>
+      </section>
+      <!-- Hero mobile-->
+      <section class="container d-md-none d-block px-0">
+        <img
+          class="d-block mx-auto mb-grid-gutter"
+          src="images/adira_banner.jpg"
+          alt="Amelie Mayer"
+        />
+        <div class="mx-auto px-3 text-center" style="max-width: 500px">
+          <h1 class="display-4 mb-4">Enjoy the new cookbook by Amelie Mayer</h1>
+          <a class="btn btn-primary" href="#book" data-scroll>Get the book</a>
+        </div>
+      </section>
+      <!-- Section2 -->
+      <section class="container-fluid vh-50">
+        <div class="row align-items-center">
+          <div class="col-md-5 mb-md-0 mb-grid-gutter p-7">
+            <div class="tns-carousel-wrapper tns-controls-inside">
+              <div
+                class="tns-carousel-inner"
+                data-carousel-options='{"gutter": 15}'
+              >
+                <div>
+                  <img
+                    class="rounded-3"
+                    src="images/icon-liburan.png"
+                    alt="Image"
+                    width="500px"
+                  />
+                </div>
+                <div>
+                  <img
+                    class="rounded-3"
+                    src="images/icon-modal-usaha.png"
+                    alt="Image"
+                    width="500px"
+                  />
+                </div>
+                <div>
+                  <img
+                    class="rounded-3"
+                    src="images/icon-pendidikan.png"
+                    alt="Image"
+                    width="500px"
+                  />
+                </div>
+                <div>
+                  <img
+                    class="rounded-3"
+                    src="images/icon-renovasi.png"
+                    alt="Image"
+                    width="500px"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 offset-lg-1 col-md-7">
+            <h2 class="mb-2">Solusi Pinjaman Dana Tunai</h2>
+
+            <p class="mb-4 pb-2 text-muted">
+              Adira Finance menawarkan fasilitas Pinjaman Dana Tunai dengan
+              jaminan BPKB sepeda motor/mobil, dengan syarat mudah dan proses
+              cepat.
+            </p>
+            <a class="btn btn-warning" href="#">Hitung Simulasi Kalkulator</a>
+          </div>
+        </div>
+      </section>
+      <hr class="hr-darker" />
+      <!-- Keunggulan Kami -->
+      <section class="container py-5 my-4 my-sm-0 py-sm-6 py-md-7">
+        <h2 class="h1 mb-4 pb-3 text-center">Keunggulan Kami</h2>
+        <div class="pb-4" data-simplebar data-simplebar-auto-hide="false">
+          <div class="d-flex justify-content-between">
+            <a class="nav-link-style mx-1" href="#" style="min-width: 120px"
+              ><img
+                class="d-block bg-faded-dark p-3 mx-auto mb-4"
+                src="images/syarat-mudah-2.png"
+                alt="Healthy"
+              /> </a
+            ><a class="nav-link-style mx-1" href="#" style="min-width: 120px"
+              ><img
+                class="d-block bg-faded-dark p-3 mx-auto mb-4"
+                src="images/pencairan-cepat-2.png"
+                alt="Desserts"
+              /> </a
+            ><a class="nav-link-style mx-1" href="#" style="min-width: 120px"
+              ><img
+                class="d-block bg-faded-dark p-3 mx-auto mb-4"
+                src="images/jaringan-luas-2.png"
+                alt="Vegetarian"
+              /> </a
+            ><a class="nav-link-style mx-1" href="#" style="min-width: 120px"
+              ><img
+                class="d-block bg-faded-dark p-3 mx-auto mb-4"
+                src="images/perlindungan-lengkap-2.png"
+                alt="Seafood"
+              /> </a
+            ><a class="nav-link-style mx-1" href="#" style="min-width: 120px"
+              ><img
+                class="d-block bg-faded-dark p-3 mx-auto mb-4"
+                src="images/pembayaran-aman-2.png"
+                alt="Bakery"
+              /> </a
+            ><a class="nav-link-style mx-1" href="#" style="min-width: 120px"
+              ><img
+                class="d-block bg-faded-dark p-3 mx-auto mb-4"
+                src="images/layanan-bersahabat-2.png"
+                alt="Soups"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tata Cara Pengajuan -->
+      <section class="bg-faded-dark position-relative pt-6 pb-5 py-sm-6">
+        <div
+          class="position-absolute top-0 start-0 w-100 h-100 bg-size-cover"
+        ></div>
+        <div class="position-relative zindex-5 container py-2">
+          <div class="row align-items-center">
+            <div class="col-lg-4 order-lg-2 pb-5 pb-lg-0">
+              <h2 class="text- dark">Tata Cara Pengajuan</h2>
+            </div>
+            <div class="col-lg-8 order-lg-3">
+              <div class="d-flex justify-content-between">
+                <div class="mb-2 pb-4 mb-sm-0 pb-sm-0">
+                  <div class="px-2 text-center">
+                    <img
+                      class="bg-light rounded-circle mb-2"
+                      src="images/pengajuan-1.png"
+                      alt="Tickets"
+                      style="width: 800px"
+                    />
+                    <h5 class="text- dark">Isi Form Pengajuan</h5>
+                    <p class="fs-sm fw-medium text- dark mb-0 pt-1">
+                      Tim Adira Finance akan melakukan survei dan validasi
+                      terkait pengajuan Pinjman Jaminan BPKB Sahabat
+                    </p>
+                  </div>
+                </div>
+                <div class="mb-2 pb-4 mb-sm-0 pb-sm-0">
+                  <div class="px-2 text-center">
+                    <img
+                      class="bg-light rounded-circle mb-2"
+                      src="images/pengajuan-2.png"
+                      alt="Search"
+                      style="width: 800px"
+                    />
+                    <h5 class="text- dark">Survei</h5>
+                    <p class="fs-sm fw-medium text- dark mb-0 pt-1">
+                      Siapkan dan isi data Jaminan BPKB Motor/Mobil serta
+                      lengkapi data diri Sahabat
+                    </p>
+                  </div>
+                </div>
+                <div class="mb-2 pb-4 mb-sm-0 pb-sm-0">
+                  <div class="px-2 text-center">
+                    <img
+                      class="bg-light rounded-circle mb-2"
+                      src="images/pengajuan-3.png"
+                      alt="F dark"
+                      style="width: 180px !important"
+                    />
+                    <h5 class="text- dark">Pencairan Dana</h5>
+                    <p class="fs-sm fw-medium text- dark mb-0 pt-1">
+                      Apabila pengajuan Sahabat disetujui, dana akan segera
+                      dicairkan ke rekening Sahabat atau dapat diambil tunai di
+                      cabang Adira Finance
+                    </p>
+                  </div>
+                </div>
+                <div class="mb-2 pb-4 mb-sm-0 pb-sm-0">
+                  <div class="px-2 text-center">
+                    <img
+                      class="bg-light rounded-circle mb-2"
+                      src="images/pengajuan-4.png"
+                      alt="F dark"
+                      style="width: 800px"
+                    />
+                    <h5 class="text- dark">Isi Form Pengajuan</h5>
+                    <p class="fs-sm fw-medium text- dark mb-0 pt-1">
+                      Siapkan dan isi data Jaminan BPKB Motor/Mobil serta
+                      lengkapi data diri Sahabat
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="container mt-3">
+        <div
+          class="row mx-0 rounded-3 overflow-hidden"
+          style="
+            background-image: url(images/center-banner-desktop.jpg);
+            background-size: cover;
+            height: 40vh;
+          "
+        >
+          <div class="col-lg-6">
+            <div
+              class="d-flex align-items-end flex-sm-row flex-column py-lg-2 py-5 px-sm-5 px-4"
+            ></div>
+          </div>
+          <div
+            class="col-lg-6 d-flex align-items-center text-end justify-content-end bg-faded-primary pe-4"
+          >
+            <button class="btn btn-warning btn-lg">Ajukan Sekarang</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tabs -->
+
+      <section class="container py-5 mt-2 mt-sm-3 mt-md-4">
+        <!-- Accordion -->
+        <div class="pb-lg-0 mb-4 mb-md-0">
+          <div class="accordion accordion-alt" id="industries">
+            <div class="accordion-item mb-n3 mb-lg-n2 mb-xl-1">
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-binded-content="#finance-img"
+                  data-bs-target="#finance"
+                  aria-expanded="false"
+                  aria-controls="finance"
+                >
+                  Simulasi Pinjaman Jaminan BPKB
+                </button>
+              </h3>
+              <div
+                class="accordion-collapse collapse"
+                id="finance"
+                data-bs-parent="#industries"
+                style=""
+              >
+                <div class="accordion-body">
+                  Sit purus platea nunc semper auctor integer semper et ac odio
+                  eget a lacus eu duis ante sed molestie varius tempus gravida
+                  libero pretium sit etiam morbi orci et vestibulum velit.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item mb-n3 mb-lg-n2 mb-xl-1">
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-binded-content="#tech-img"
+                  data-bs-target="#tech"
+                  aria-expanded="false"
+                  aria-controls="tech"
+                >
+                  Apa yang dimaksud dengan Kredit Multiguna Jasa?
+                </button>
+              </h3>
+              <div
+                class="accordion-collapse collapse"
+                id="tech"
+                data-bs-parent="#industries"
+              >
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vestibulum posuere finibus dui, eget scelerisque ipsum
+                  suscipit nec. Praesent nec quam in ipsum ultricies ultricies
+                  et sagittis dui.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item mb-n3 mb-lg-n2 mb-xl-1">
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-binded-content="#medicine-img"
+                  data-bs-target="#medicine"
+                  aria-expanded="false"
+                  aria-controls="medicine"
+                >
+                  Ringkasan Informasi Produk dan Layanan Umum
+                </button>
+              </h3>
+              <div
+                class="accordion-collapse collapse"
+                id="medicine"
+                data-bs-parent="#industries"
+              >
+                <div class="accordion-body">
+                  Pellentesque habitant morbi tristique senectus et netus et
+                  malesuada fames ac turpis egestas. Mauris tincidunt imperdiet
+                  hendrerit. Fusce tortor turpis, facilisis ac efficitur eget.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item mb-n3 mb-lg-n2 mb-xl-1">
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-binded-content="#ecommerce-img"
+                  data-bs-target="#ecommerce"
+                  aria-expanded="false"
+                  aria-controls="ecommerce"
+                >
+                  Tata Cara Pengajuan
+                </button>
+              </h3>
+              <div
+                class="accordion-collapse collapse"
+                id="ecommerce"
+                data-bs-parent="#industries"
+              >
+                <div class="accordion-body">
+                  Curabitur dictum sodales aliquam. Etiam tortor augue, ultrices
+                  in efficitur sit amet, luctus dapibus magna. Vivamus eu lacus
+                  elementum, ultrices massa vitae, elementum lorem.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr class="bg-darker" />
+
+      <!-- Tabel -->
+      <section class="container mt-3">
+        <p class="text-center">
+          *) Estimasi nilai pinjaman jaminan BPKB bukan merupakan persetujuan
+          pinjaman dana, bersifat tidak mengikat, dan dapat disesuaikan
+          berdasarkan penilaian lebih lanjut serta kebijakan Adira Finance.
+        </p>
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="text-center mb-2">
+              <span style="font-size: 24px"
+                >Skema Angsuran Pinjaman Jaminan BPKB Motor</span
+              >
+            </div>
+            <div class="text-center mb-3">
+              <table
+                class="table table-bordered perhitungan"
+                style="
+                  width: 99.9606%;
+                  height: 268.75px;
+                  border-collapse: collapse;
+                  background-color: rgb(206, 212, 217);
+                  border-width: 1px;
+                "
+                border="1"
+              >
+                <tbody>
+                  <tr style="height: 22.3958px">
+                    <th
+                      style="
+                        background: rgb(252, 215, 51);
+                        width: 33.9922%;
+                        height: 22.3958px;
+                      "
+                    >
+                      Pinjaman
+                    </th>
+                    <th
+                      style="
+                        background: rgb(252, 215, 51);
+                        width: 22.267%;
+                        height: 22.3958px;
+                      "
+                    >
+                      Tenor
+                    </th>
+                    <th
+                      style="
+                        background: rgb(252, 215, 51);
+                        width: 43.6735%;
+                        height: 22.3958px;
+                      "
+                    >
+                      Jumlah Angsuran
+                    </th>
+                  </tr>
+                  <tr style="background: rgb(242, 242, 242); height: 22.3958px">
+                    <td style="width: 33.9922%; height: 22.3958px">
+                      Rp 5.000.000
+                    </td>
+                    <td style="width: 22.267%; height: 22.3958px">12 Bulan</td>
+                    <td style="width: 43.6735%; height: 22.3958px">
+                      Rp 593.000
+                    </td>
+                  </tr>
+                  <tr style="background: rgb(242, 242, 242); height: 22.3958px">
+                    <td style="width: 33.9922%; height: 22.3958px">
+                      Rp 5.000.000
+                    </td>
+                    <td style="width: 22.267%; height: 22.3958px">24 Bulan</td>
+                    <td style="width: 43.6735%; height: 22.3958px">
+                      Rp 356.000
+                    </td>
+                  </tr>
+                  <tr style="background: rgb(242, 242, 242); height: 22.3958px">
+                    <td style="width: 33.9922%; height: 22.3958px">
+                      Rp 5.000.000
+                    </td>
+                    <td style="width: 22.267%; height: 22.3958px">36 Bulan</td>
+                    <td style="width: 43.6735%; height: 22.3958px">
+                      Rp 281.000
+                    </td>
+                  </tr>
+                  <tr style="background: rgb(219, 219, 219); height: 22.3958px">
+                    <td style="width: 33.9922%; height: 22.3958px">
+                      Rp 10.000.000
+                    </td>
+                    <td style="width: 22.267%; height: 22.3958px">12 Bulan</td>
+                    <td style="width: 43.6735%; height: 22.3958px">
+                      Rp 1.093.000
+                    </td>
+                  </tr>
+                  <tr style="background: rgb(219, 219, 219); height: 22.3958px">
+                    <td style="width: 33.9922%; height: 22.3958px">
+                      Rp 10.000.000
+                    </td>
+                    <td style="width: 22.267%; height: 22.3958px">24 Bulan</td>
+                    <td style="width: 43.6735%; height: 22.3958px">
+                      Rp 648.000
+                    </td>
+                  </tr>
+                  <tr style="background: rgb(219, 219, 219); height: 22.3958px">
+                    <td style="width: 33.9922%; height: 22.3958px">
+                      Rp 10.000.000
+                    </td>
+                    <td style="width: 22.267%; height: 22.3958px">36 Bulan</td>
+                    <td style="width: 43.6735%; height: 22.3958px">
+                      Rp 507.000
+                    </td>
+                  </tr>
+                  <tr style="background: rgb(242, 242, 242); height: 22.3958px">
+                    <td style="width: 33.9922%; height: 22.3958px">
+                      Rp 15.000.000
+                    </td>
+                    <td style="width: 22.267%; height: 22.3958px">12 Bulan</td>
+                    <td style="width: 43.6735%; height: 22.3958px">
+                      Rp 1.593.000
+                    </td>
+                  </tr>
+                  <tr style="background: rgb(242, 242, 242); height: 22.3958px">
+                    <td style="width: 33.9922%; height: 22.3958px">
+                      Rp 15.000.000
+                    </td>
+                    <td style="width: 22.267%; height: 22.3958px">24 Bulan</td>
+                    <td style="width: 43.6735%; height: 22.3958px">
+                      Rp 941.000
+                    </td>
+                  </tr>
+                  <tr style="background: rgb(242, 242, 242); height: 22.3958px">
+                    <td style="width: 33.9922%; height: 22.3958px">
+                      Rp 15.000.000
+                    </td>
+                    <td style="width: 22.267%; height: 22.3958px">36 Bulan</td>
+                    <td style="width: 43.6735%; height: 22.3958px">
+                      Rp 733.000
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="width: 33.9922%; height: 22.3958px">
+                      Rp 20.000.000
+                    </td>
+                    <td style="width: 22.267%; height: 22.3958px">12 Bulan</td>
+                    <td style="width: 43.6735%; height: 22.3958px">
+                      Rp 2.101.000
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="width: 33.9922%; height: 22.3958px">
+                      Rp 20.000.000
+                    </td>
+                    <td style="width: 22.267%; height: 22.3958px">24 Bulan</td>
+                    <td style="width: 43.6735%; height: 22.3958px">
+                      Rp 1.243.000
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="width: 33.9922%; height: 22.3958px">
+                      Rp 20.000.000
+                    </td>
+                    <td style="width: 22.267%; height: 22.3958px">36 Bulan</td>
+                    <td style="width: 43.6735%; height: 22.3958px">
+                      Rp 969.000
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="text-center mb-2">
+              <span class="WixMadeforTextBold2-font" style="font-size: 24px"
+                >Skema Angsuran Pinjaman Jaminan BPKB Mobil</span
+              >
+            </div>
+            <div class="text-center mb-3">
+              <table
+                class="table table-bordered perhitungan"
+                style="
+                  width: 99.9606%;
+                  height: 268.75px;
+                  border-collapse: collapse;
+                  background-color: rgb(206, 212, 217);
+                  border-width: 1px;
+                "
+                border="1"
+              >
+                <tbody>
+                  <tr style="height: 22.3958px">
+                    <th
+                      style="
+                        background: rgb(252, 215, 51);
+                        width: 34.0186%;
+                        height: 22.3958px;
+                      "
+                    >
+                      Pinjaman
+                    </th>
+                    <th
+                      style="
+                        background: rgb(252, 215, 51);
+                        width: 22.284%;
+                        height: 22.3958px;
+                      "
+                    >
+                      Tenor
+                    </th>
+                    <th
+                      style="
+                        background: rgb(252, 215, 51);
+                        width: 43.6197%;
+                        height: 22.3958px;
+                      "
+                    >
+                      Jumlah Angsuran
+                    </th>
+                  </tr>
+                  <tr style="background: rgb(242, 242, 242); height: 22.3958px">
+                    <td style="width: 34.0186%; height: 22.3958px">
+                      Rp 30.000.000
+                    </td>
+                    <td style="width: 22.284%; height: 22.3958px">12 Bulan</td>
+                    <td style="width: 43.6197%; height: 22.3958px">
+                      Rp 2.991.000
+                    </td>
+                  </tr>
+                  <tr style="background: rgb(242, 242, 242); height: 22.3958px">
+                    <td style="width: 34.0186%; height: 22.3958px">
+                      Rp 30.000.000
+                    </td>
+                    <td style="width: 22.284%; height: 22.3958px">24 Bulan</td>
+                    <td style="width: 43.6197%; height: 22.3958px">
+                      Rp 1.648.000
+                    </td>
+                  </tr>
+                  <tr style="background: rgb(242, 242, 242); height: 22.3958px">
+                    <td style="width: 34.0186%; height: 22.3958px">
+                      Rp 30.000.000
+                    </td>
+                    <td style="width: 22.284%; height: 22.3958px">36 Bulan</td>
+                    <td style="width: 43.6197%; height: 22.3958px">
+                      Rp 1.214.000
+                    </td>
+                  </tr>
+                  <tr style="background: rgb(242, 242, 242); height: 22.3958px">
+                    <td style="width: 34.0186%; height: 22.3958px">
+                      Rp 30.000.000
+                    </td>
+                    <td style="width: 22.284%; height: 22.3958px">48 Bulan</td>
+                    <td style="width: 43.6197%; height: 22.3958px">
+                      Rp 996.000
+                    </td>
+                  </tr>
+                  <tr style="background: rgb(219, 219, 219); height: 22.3958px">
+                    <td style="width: 34.0186%; height: 22.3958px">
+                      Rp 80.000.000
+                    </td>
+                    <td style="width: 22.284%; height: 22.3958px">12 Bulan</td>
+                    <td style="width: 43.6197%; height: 22.3958px">
+                      Rp 7.551.000
+                    </td>
+                  </tr>
+                  <tr style="background: rgb(219, 219, 219); height: 22.3958px">
+                    <td style="width: 34.0186%; height: 22.3958px">
+                      Rp 80.000.000
+                    </td>
+                    <td style="width: 22.284%; height: 22.3958px">24 Bulan</td>
+                    <td style="width: 43.6197%; height: 22.3958px">
+                      Rp 4.121.000
+                    </td>
+                  </tr>
+                  <tr style="background: rgb(219, 219, 219); height: 22.3958px">
+                    <td style="width: 34.0186%; height: 22.3958px">
+                      Rp 80.000.000
+                    </td>
+                    <td style="width: 22.284%; height: 22.3958px">36 Bulan</td>
+                    <td style="width: 43.6197%; height: 22.3958px">
+                      Rp 2.996.000
+                    </td>
+                  </tr>
+                  <tr style="background: rgb(219, 219, 219); height: 22.3958px">
+                    <td style="width: 34.0186%; height: 22.3958px">
+                      Rp 80.000.000
+                    </td>
+                    <td style="width: 22.284%; height: 22.3958px">48 Bulan</td>
+                    <td style="width: 43.6197%; height: 22.3958px">
+                      Rp 2.439.000
+                    </td>
+                  </tr>
+                  <tr style="background: rgb(242, 242, 242); height: 22.3958px">
+                    <td style="width: 34.0186%; height: 22.3958px">
+                      Rp 150.000.000
+                    </td>
+                    <td style="width: 22.284%; height: 22.3958px">12 Bulan</td>
+                    <td style="width: 43.6197%; height: 22.3958px">
+                      Rp 13.991.000
+                    </td>
+                  </tr>
+                  <tr style="background: rgb(242, 242, 242); height: 22.3958px">
+                    <td style="width: 34.0186%; height: 22.3958px">
+                      Rp 150.000.000
+                    </td>
+                    <td style="width: 22.284%; height: 22.3958px">24 Bulan</td>
+                    <td style="width: 43.6197%; height: 22.3958px">
+                      Rp 7.633.000
+                    </td>
+                  </tr>
+                  <tr style="background: rgb(242, 242, 242); height: 22.3958px">
+                    <td style="width: 34.0186%; height: 22.3958px">
+                      Rp 150.000.000
+                    </td>
+                    <td style="width: 22.284%; height: 22.3958px">36 Bulan</td>
+                    <td style="width: 43.6197%; height: 22.3958px">
+                      Rp 5.549.000
+                    </td>
+                  </tr>
+                  <tr style="background: rgb(242, 242, 242); height: 22.3958px">
+                    <td style="width: 34.0186%; height: 22.3958px">
+                      Rp 150.000.000
+                    </td>
+                    <td style="width: 22.284%; height: 22.3958px">48 Bulan</td>
+                    <td style="width: 43.6197%; height: 22.3958px">
+                      Rp 5.516.000
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>&nbsp;</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Featured recipes-->
+      <section class="container pt-5 mt-4 mt-sm-0 pt-sm-6 pt-md-7 pb-lg-7">
+        <h2 class="h1 text-center">Featured recipes</h2>
+        <!-- Carousel-->
+        <div class="tns-carousel-wrapper">
+          <!-- Carousel progress-->
+          <div class="tns-carousel-progress ms-auto mb-3">
+            <div class="text-sm text-muted text-center mb-2">
+              <span class="tns-current-slide me-1"></span>of<span
+                class="tns-total-slides ms-1"
+              ></span>
+            </div>
+            <div class="progress">
+              <div class="progress-bar bg-primary" role="progressbar"></div>
+            </div>
+          </div>
+          <div
+            class="tns-carousel-inner"
+            data-carousel-options='{"nav": false, "responsive": {"0":{"items":1, "gutter": 16, "controls": false},"500":{"items":2, "gutter": 16},"768":{"items":3, "gutter": 16},"991":{"controls": true}}}'
+          >
+            <!-- Carousel item-->
+            <article class="pb-2">
+              <a class="card h-100 border-0 shadow card-hover mx-1" href="#"
+                ><span
+                  class="badge badge-lg badge-floating badge-floating-end bg-success"
+                  >Vegetarian</span
+                >
+                <div class="card-img-top card-img-gradient">
+                  <img
+                    src="images/demo/food-blog/featured-recipes/01.jpg"
+                    alt="Vegan Raw Seasoning Appetizers"
+                  /><span class="card-floating-text text-light fw-medium"
+                    >Discover this recipe<i
+                      class="ai-chevron-right fs-lg ms-1 mt-n1 align-middle"
+                    ></i
+                  ></span>
+                </div>
+                <div class="card-body">
+                  <div class="mb-3 text-nowrap">
+                    <span class="meta-link fs-xs"
+                      ><i class="ai-calendar me-1 mt-n1"></i>&nbsp;Oct 8</span
+                    ><span class="meta-divider"></span
+                    ><span class="meta-link fs-xs"
+                      ><i class="ai-message-square me-1"></i>&nbsp;3</span
+                    >
+                  </div>
+                  <h3 class="h5 pt-1 mb-3">Vegan Raw Seasoning Appetizers</h3>
+                  <p class="fs-sm text-muted mb-2">10 min — 2-4 portions</p>
+                </div></a
+              >
+            </article>
+            <!-- Carousel item-->
+            <article class="pb-2">
+              <a class="card h-100 border-0 shadow card-hover mx-1" href="#"
+                ><span
+                  class="badge badge-lg badge-floating badge-floating-end bg-info"
+                  >Soups</span
+                >
+                <div class="card-img-top card-img-gradient">
+                  <img
+                    src="images/demo/food-blog/featured-recipes/02.jpg"
+                    alt="Shrimp Soup With Chili"
+                  /><span class="card-floating-text text-light fw-medium"
+                    >Discover this recipe<i
+                      class="ai-chevron-right fs-lg ms-1 mt-n1 align-middle"
+                    ></i
+                  ></span>
+                </div>
+                <div class="card-body">
+                  <div class="mb-3 text-nowrap">
+                    <span class="meta-link fs-xs"
+                      ><i class="ai-calendar me-1 mt-n1"></i>&nbsp;Sep 29</span
+                    ><span class="meta-divider"></span
+                    ><span class="meta-link fs-xs"
+                      ><i class="ai-message-square me-1"></i>&nbsp;1</span
+                    >
+                  </div>
+                  <h3 class="h5 pt-1 mb-3">Shrimp Soup With Chili</h3>
+                  <p class="fs-sm text-muted mb-2">35 min — 2-4 portions</p>
+                </div></a
+              >
+            </article>
+            <!-- Carousel item-->
+            <article class="pb-2">
+              <a class="card h-100 border-0 shadow card-hover mx-1" href="#"
+                ><span
+                  class="badge badge-lg badge-floating badge-floating-end bg-warning"
+                  >Desserts</span
+                >
+                <div class="card-img-top card-img-gradient">
+                  <img
+                    src="images/demo/food-blog/featured-recipes/03.jpg"
+                    alt="Healthy Dessert With Nuts &amp;amp; Berries"
+                  /><span class="card-floating-text text-light fw-medium"
+                    >Discover this recipe<i
+                      class="ai-chevron-right fs-lg ms-1 mt-n1 align-middle"
+                    ></i
+                  ></span>
+                </div>
+                <div class="card-body">
+                  <div class="mb-3 text-nowrap">
+                    <span class="meta-link fs-xs"
+                      ><i class="ai-calendar me-1 mt-n1"></i>&nbsp;Sep 12</span
+                    ><span class="meta-divider"></span
+                    ><span class="meta-link fs-xs"
+                      ><i class="ai-message-square me-1"></i>&nbsp;4</span
+                    >
+                  </div>
+                  <h3 class="h5 pt-1 mb-3">
+                    Healthy Dessert With Nuts &amp; Berries
+                  </h3>
+                  <p class="fs-sm text-muted mb-2">15 min — 6-8 portions</p>
+                </div></a
+              >
+            </article>
+            <!-- Carousel item-->
+            <article class="pb-2">
+              <a class="card h-100 border-0 shadow card-hover mx-1" href="#"
+                ><span
+                  class="badge badge-lg badge-floating badge-floating-end bg-warning"
+                  >Desserts</span
+                >
+                <div class="card-img-top card-img-gradient">
+                  <img
+                    src="images/demo/food-blog/featured-recipes/04.jpg"
+                    alt="Fluffy American pancakes"
+                  /><span class="card-floating-text text-light fw-medium"
+                    >Discover this recipe<i
+                      class="ai-chevron-right fs-lg ms-1 mt-n1 align-middle"
+                    ></i
+                  ></span>
+                </div>
+                <div class="card-body">
+                  <div class="mb-3 text-nowrap">
+                    <span class="meta-link fs-xs"
+                      ><i class="ai-calendar me-1 mt-n1"></i>&nbsp;Nov 4</span
+                    ><span class="meta-divider"></span
+                    ><span class="meta-link fs-xs"
+                      ><i class="ai-message-square me-1"></i>&nbsp;2</span
+                    >
+                  </div>
+                  <h3 class="h5 pt-1 mb-3">Fluffy American pancakes</h3>
+                  <p class="fs-sm text-muted mb-2">10 min — 3-6 portions</p>
+                </div></a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- Book-->
+      <section class="container" id="book">
+        <div
+          class="row mx-0 rounded-3 overflow-hidden"
+          style="background-color: #f3f3f9"
+        >
+          <div class="col-lg-6" style="background-color: #f4f4f6">
+            <div
+              class="d-flex align-items-start flex-sm-row flex-column py-lg-2 py-5 px-sm-5 px-4"
+            >
+              <img
+                class="me-sm-5 ms-sm-0 mx-auto mb-sm-0 mb-4"
+                src="images/demo/food-blog/book.png"
+                alt="New recipes book"
+              />
+              <div class="align-self-center ps-2 text-sm-start text-center">
+                <h2 class="mb-4">The new vegan recipes book!</h2>
+                <a class="btn btn-primary" href="#"
+                  ><i class="ai-download me-1"></i>Download book</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 d-flex align-items-center bg-faded-primary">
+            <div class="w-100 py-lg-2 py-5 px-sm-5 px-4">
+              <h2 class="mb-2 text-center">Subscribe our newsletter</h2>
+              <h6 class="mb-4 pb-2 fw-normal text-center">
+                Never miss a post!
+              </h6>
+              <!-- Form subscribe-->
+              <form class="input-group mx-auto" style="max-width: 600px">
+                <input
+                  class="form-control"
+                  type="email"
+                  placeholder="Enter your email"
+                  required
+                />
+                <button class="btn btn-success" type="submit">
+                  <i class="ai-send fs-xl"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Categories-->
+      <section class="container py-5 my-4 my-sm-0 py-sm-6 py-md-7">
+        <h2 class="h1 mb-4 pb-3 text-center">Popular categories</h2>
+        <div class="pb-4" data-simplebar data-simplebar-auto-hide="false">
+          <div class="d-flex justify-content-between">
+            <a class="nav-link-style" href="#" style="min-width: 120px"
+              ><img
+                class="d-block mx-auto mb-4"
+                src="images/demo/food-blog/categories/01.svg"
+                alt="Healthy"
+                style="max-width: 80px"
+              />
+              <p class="mb-0 text-center">Healthy</p></a
+            ><a class="nav-link-style" href="#" style="min-width: 120px"
+              ><img
+                class="d-block mx-auto mb-4"
+                src="img/demo/food-blog/categories/02.svg"
+                alt="Desserts"
+                style="max-width: 80px"
+              />
+              <p class="mb-0 text-center">Desserts</p></a
+            ><a class="nav-link-style" href="#" style="min-width: 120px"
+              ><img
+                class="d-block mx-auto mb-4"
+                src="img/demo/food-blog/categories/03.svg"
+                alt="Vegetarian"
+                style="max-width: 80px"
+              />
+              <p class="mb-0 text-center">Vegetarian</p></a
+            ><a class="nav-link-style" href="#" style="min-width: 120px"
+              ><img
+                class="d-block mx-auto mb-4"
+                src="img/demo/food-blog/categories/04.svg"
+                alt="Seafood"
+                style="max-width: 80px"
+              />
+              <p class="mb-0 text-center">Seafood</p></a
+            ><a class="nav-link-style" href="#" style="min-width: 120px"
+              ><img
+                class="d-block mx-auto mb-4"
+                src="img/demo/food-blog/categories/05.svg"
+                alt="Bakery"
+                style="max-width: 80px"
+              />
+              <p class="mb-0 text-center">Bakery</p></a
+            ><a class="nav-link-style" href="#" style="min-width: 120px"
+              ><img
+                class="d-block mx-auto mb-4"
+                src="img/demo/food-blog/categories/06.svg"
+                alt="Soups"
+                style="max-width: 80px"
+              />
+              <p class="mb-0 text-center">Soups</p></a
+            >
+          </div>
+        </div>
+      </section>
+      <!-- Posts with sidebar right-->
+      <section class="container">
+        <div class="row">
+          <!-- Content-->
+          <div class="col-lg-9">
+            <!-- Post-->
+            <article class="card card-horizontal card-hover mb-grid-gutter">
+              <a
+                class="card-img-top"
+                href="#"
+                style="background-image: url(img/demo/food-blog/posts/01.jpg)"
+                ><span
+                  class="badge badge-lg badge-floating text-white"
+                  style="background-color: #f74f78"
+                  >Seafood</span
+                ></a
+              >
+              <div class="card-body">
+                <span class="d-inline-block mb-2 pb-1 fs-sm text-muted"
+                  ><i class="ai-clock fs-base me-2 mt-n1"></i>10 min — 6-8
+                  portions</span
+                >
+                <h2 class="h4 nav-heading text-capitalize mb-3">
+                  <a href="#">Asian chilli garlic shrimps</a>
+                </h2>
+                <p class="mb-0 fs-sm text-muted">
+                  Dignissim suspendisse in est ante in nibh mauris cursus
+                  mattis. Tempor id eu nisl nunc mi. Scelerisque eu ultrices
+                  vitae auctor. Ut faucibus pulvinar elementum integer. Sed
+                  vulputate mi sit amet mauris commodo. In eu mi bibendum neque…
+                </p>
+                <div class="mt-3 text-end text-nowrap">
+                  <a class="meta-link fs-xs" href="#"
+                    ><i class="ai-calendar me-1 mt-n1"></i>&nbsp;Oct 29</a
+                  ><span class="meta-divider"></span
+                  ><a class="meta-link fs-xs" href="#"
+                    ><i class="ai-message-square me-1"></i>&nbsp;4</a
+                  >
+                </div>
+              </div>
+            </article>
+            <!-- Post-->
+            <article class="card card-horizontal card-hover mb-grid-gutter">
+              <div
+                class="card-img-top d-flex align-items-center justify-content-center"
+                style="background-image: url(img/demo/food-blog/posts/02.jpg)"
+              >
+                <span class="badge badge-lg badge-floating bg-warning"
+                  >Desserts</span
+                ><a
+                  class="btn-video btn-video-sm"
+                  href="https://www.youtube.com/watch?v=JzJsUW4xV7k&amp;ab_channel=HealthNutNutrition"
+                ></a>
+              </div>
+              <div class="card-body">
+                <span class="d-inline-block mb-2 pb-1 fs-sm text-muted"
+                  ><i class="ai-video fs-base me-2 mt-n1"></i>12:49</span
+                >
+                <h2 class="h4 nav-heading text-capitalize mb-3">
+                  <a href="#">Belgian Waffles with Triple Berry Sauce</a>
+                </h2>
+                <p class="mb-0 fs-sm text-muted">
+                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                  blanditiis praesentium voluptatum deleniti atque corrupti quos
+                  dolores et quas molestias excepturi sint occaecati cupiditate
+                  non provident, similique sunt in culpa…
+                </p>
+                <div class="mt-3 text-end text-nowrap">
+                  <a class="meta-link fs-xs" href="#"
+                    ><i class="ai-calendar me-1 mt-n1"></i>&nbsp;Oct 17</a
+                  ><span class="meta-divider"></span
+                  ><a class="meta-link fs-xs" href="#"
+                    ><i class="ai-message-square me-1"></i>&nbsp;2</a
+                  >
+                </div>
+              </div>
+            </article>
+            <!-- Post-->
+            <article class="card card-horizontal card-hover mb-grid-gutter">
+              <a
+                class="card-img-top"
+                href="#"
+                style="background-image: url(img/demo/food-blog/posts/03.jpg)"
+                ><span class="badge badge-lg badge-floating bg-success"
+                  >Vegetarian</span
+                ></a
+              >
+              <div class="card-body">
+                <span class="d-inline-block mb-2 pb-1 fs-sm text-muted"
+                  ><i class="ai-clock fs-base me-2 mt-n1"></i>17 min — 4-6
+                  portions</span
+                >
+                <h2 class="h4 nav-heading text-capitalize mb-3">
+                  <a href="#">Vegan Bowl with Avocado, Cabbage and Quinoa</a>
+                </h2>
+                <p class="mb-0 fs-sm text-muted">
+                  Find aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Et harum quidem rerum
+                  facilis est et expedita distinctio.
+                </p>
+                <div class="mt-3 text-end text-nowrap">
+                  <a class="meta-link fs-xs" href="#"
+                    ><i class="ai-calendar me-1 mt-n1"></i>&nbsp;Oct 9</a
+                  ><span class="meta-divider"></span
+                  ><a class="meta-link fs-xs" href="#"
+                    ><i class="ai-message-square me-1"></i>&nbsp;3</a
+                  >
+                </div>
+              </div>
+            </article>
+            <!-- Post-->
+            <article class="card card-horizontal card-hover mb-grid-gutter">
+              <a
+                class="card-img-top"
+                href="#"
+                style="background-image: url(img/demo/food-blog/posts/04.jpg)"
+                ><span class="badge badge-lg badge-floating bg-primary"
+                  >Healthy</span
+                ></a
+              >
+              <div class="card-body">
+                <span class="d-inline-block mb-2 pb-1 fs-sm text-muted"
+                  ><i class="ai-clock fs-base me-2 mt-n1"></i>10 min — 2-4
+                  portions</span
+                >
+                <h2 class="h4 nav-heading text-capitalize mb-3">
+                  <a href="#">Toast in a Bowl</a>
+                </h2>
+                <p class="mb-0 fs-sm text-muted">
+                  Dui ut ornare lectus sit amet est placerat. Diam sit amet nisl
+                  suscipit adipiscing bibendum est ultricies integer. Nunc
+                  mattis enim ut tellus elementum sagittis vitae. Gravida dictum
+                  fusce ut placerat. Sit amet consectetur adipiscing elit duis…
+                </p>
+                <div class="mt-3 text-end text-nowrap">
+                  <a class="meta-link fs-xs" href="#"
+                    ><i class="ai-calendar me-1 mt-n1"></i>&nbsp;Oct 2</a
+                  ><span class="meta-divider"></span
+                  ><a class="meta-link fs-xs" href="#"
+                    ><i class="ai-message-square me-1"></i>&nbsp;1</a
+                  >
+                </div>
+              </div>
+            </article>
+            <!-- Post-->
+            <article class="card card-horizontal card-hover mb-grid-gutter">
+              <a
+                class="card-img-top"
+                href="#"
+                style="background-image: url(img/demo/food-blog/posts/05.jpg)"
+                ><span class="badge badge-lg badge-floating bg-success"
+                  >Vegetarian</span
+                ></a
+              >
+              <div class="card-body">
+                <span class="d-inline-block mb-2 pb-1 fs-sm text-muted"
+                  ><i class="ai-clock fs-base me-2 mt-n1"></i>15 min — 2-4
+                  portions</span
+                >
+                <h2 class="h4 nav-heading text-capitalize mb-3">
+                  <a href="#">Vegan Stir Fry with Rice Vermicelli</a>
+                </h2>
+                <p class="mb-0 fs-sm text-muted">
+                  Non nisi est sit amet. Sagittis aliquam malesuada bibendum
+                  arcu vitae elementum curabitur vitae. Mi bibendum neque
+                  egestas congue quisque egestas diam in. Donec adipiscing
+                  tristique risus nec similique sunt in culpa…
+                </p>
+                <div class="mt-3 text-end text-nowrap">
+                  <a class="meta-link fs-xs" href="#"
+                    ><i class="ai-calendar me-1 mt-n1"></i>&nbsp;Sep 15</a
+                  ><span class="meta-divider"></span
+                  ><a class="meta-link fs-xs" href="#"
+                    ><i class="ai-message-square me-1"></i>&nbsp;4</a
+                  >
+                </div>
+              </div>
+            </article>
+            <!-- Post-->
+            <article class="card card-horizontal card-hover mb-grid-gutter">
+              <div
+                class="card-img-top d-flex align-items-center justify-content-center"
+                style="background-image: url(img/demo/food-blog/posts/06.jpg)"
+              >
+                <span class="badge badge-lg badge-floating bg-info">Soups</span
+                ><a
+                  class="btn-video btn-video-sm"
+                  href="https://www.youtube.com/watch?v=JzJsUW4xV7k&amp;ab_channel=HealthNutNutrition"
+                ></a>
+              </div>
+              <div class="card-body">
+                <span class="d-inline-block mb-2 pb-1 fs-sm text-muted"
+                  ><i class="ai-video fs-base me-2 mt-n1"></i>20:15</span
+                >
+                <h2 class="h4 nav-heading text-capitalize mb-3">
+                  <a href="#">Spicy Chicken Soup</a>
+                </h2>
+                <p class="mb-0 fs-sm text-muted">
+                  Nulla aliquet enim tortor at auctor. Diam vel quam elementum
+                  pulvinar etiam. Non diam phasellus vestibulum lorem sed risus
+                  ultricies tristique. Et tortor consequat id porta nibh
+                  venenatis cras. Pellentesque id nibh tortor id aliquet lectus…
+                </p>
+                <div class="mt-3 text-end text-nowrap">
+                  <a class="meta-link fs-xs" href="#"
+                    ><i class="ai-calendar me-1 mt-n1"></i>&nbsp;Sep 8</a
+                  ><span class="meta-divider"></span
+                  ><a class="meta-link fs-xs" href="#"
+                    ><i class="ai-message-square me-1"></i>&nbsp;1</a
+                  >
+                </div>
+              </div>
+            </article>
+            <!-- Pagination-->
+            <div
+              class="d-md-flex justify-content-between align-items-center pt-3 pb-sm-2"
+            >
+              <div
+                class="d-flex justify-content-center align-items-center mb-4"
+              >
+                <label class="pe-1 me-2 mt-n1 fs-sm">Show</label>
+                <select class="form-select me-2" style="width: 5rem">
+                  <option value="6">6</option>
+                  <option value="12">12</option>
+                  <option value="20">20</option>
+                  <option value="30">30</option>
+                  <option value="40">40</option>
+                </select>
+                <div class="fs-sm text-nowrap ps-1 mb-1">posts per page</div>
+              </div>
+              <nav class="mb-4" aria-label="Page navigation">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous"
+                      ><i class="ai-chevron-left"></i
+                    ></a>
+                  </li>
+                  <li class="page-item d-sm-none">
+                    <span class="page-link page-link-static">2 / 10</span>
+                  </li>
+                  <li class="page-item d-none d-sm-block">
+                    <a class="page-link" href="#">1</a>
+                  </li>
+                  <li
+                    class="page-item active d-none d-sm-block"
+                    aria-current="page"
+                  >
+                    <span class="page-link"
+                      >2<span class="visually-hidden">(current)</span></span
+                    >
+                  </li>
+                  <li class="page-item d-none d-sm-block">
+                    <a class="page-link" href="#">3</a>
+                  </li>
+                  <li class="page-item d-none d-sm-block">
+                    <a class="page-link" href="#">4</a>
+                  </li>
+                  <li class="page-item d-none d-sm-block">...</li>
+                  <li class="page-item d-none d-sm-block">
+                    <a class="page-link" href="#">10</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next"
+                      ><i class="ai-chevron-right"></i
+                    ></a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <!-- Sidebar-->
+          <aside class="col-lg-3">
+            <div
+              class="offcanvas offcanvas-collapse offcanvas-end"
+              id="blog-sidebar"
+            >
+              <div class="offcanvas-header navbar-shadow px-4 mb-3">
+                <h5 class="mt-1 mb-0">Sidebar</h5>
+                <button
+                  class="btn-close lead"
+                  type="button"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div
+                class="offcanvas-body px-4 pt-3 pt-lg-0 pe-lg-0 ps-lg-2 ps-xl-4"
+                data-simplebar
+              >
+                <!-- Categories-->
+                <div class="widget widget-categories mb-5">
+                  <h3 class="widget-title">Ingredients</h3>
+                  <ul>
+                    <li>
+                      <a class="widget-link" href="#"
+                        >Apple<small class="text-muted ps-1 ms-2">23</small></a
+                      >
+                    </li>
+                    <li>
+                      <a class="widget-link" href="#"
+                        >Banana<small class="text-muted ps-1 ms-2">14</small></a
+                      >
+                    </li>
+                    <li>
+                      <a class="widget-link" href="#"
+                        >Berries<small class="text-muted ps-1 ms-2">7</small></a
+                      >
+                    </li>
+                    <li>
+                      <a class="widget-link" href="#"
+                        >Cabbage<small class="text-muted ps-1 ms-2"
+                          >19</small
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a class="widget-link" href="#"
+                        >Citrus<small class="text-muted ps-1 ms-2">26</small></a
+                      >
+                    </li>
+                    <li>
+                      <a class="widget-link" href="#"
+                        >Corn<small class="text-muted ps-1 ms-2">8</small></a
+                      >
+                    </li>
+                    <li>
+                      <a class="widget-link" href="#"
+                        >Cucumber<small class="text-muted ps-1 ms-2"
+                          >25</small
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a class="widget-link" href="#"
+                        >Egg<small class="text-muted ps-1 ms-2">14</small></a
+                      >
+                    </li>
+                    <li>
+                      <a class="widget-link" href="#"
+                        >Herbs<small class="text-muted ps-1 ms-2">27</small></a
+                      >
+                    </li>
+                    <li>
+                      <a class="widget-link" href="#"
+                        >Potato<small class="text-muted ps-1 ms-2">29</small></a
+                      >
+                    </li>
+                    <li>
+                      <a class="widget-link" href="#"
+                        >Tomatoes<small class="text-muted ps-1 ms-2"
+                          >32</small
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a class="widget-link" href="#"
+                        >Watermelon<small class="text-muted ps-1 ms-2"
+                          >4</small
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <!-- Featured posts-->
+                <div class="widget mt-n1 mb-5">
+                  <h3 class="widget-title pb-1">Popular recipes</h3>
+                  <div class="d-flex align-items-start pb-1 mb-3">
+                    <a class="d-block flex-shrink-0" href="#"
+                      ><img
+                        class="rounded"
+                        src="img/demo/food-blog/posts/th/01.jpg"
+                        alt="Post"
+                        width="64"
+                    /></a>
+                    <div class="ps-2 ms-1">
+                      <h4 class="fs-md nav-heading mb-1">
+                        <a class="fw-medium" href="#">Sweet Cream Cupcake</a>
+                      </h4>
+                      <p class="fs-xs text-muted mb-0">by Amelie Mayer</p>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-start pb-1 mb-3">
+                    <a class="d-block flex-shrink-0" href="#"
+                      ><img
+                        class="rounded"
+                        src="img/demo/food-blog/posts/th/02.jpg"
+                        alt="Post"
+                        width="64"
+                    /></a>
+                    <div class="ps-2 ms-1">
+                      <h4 class="fs-md nav-heading mb-1">
+                        <a class="fw-medium" href="#"
+                          >Keto Paleo Carb-Free Breakfast</a
+                        >
+                      </h4>
+                      <p class="fs-xs text-muted mb-0">by Amelie Mayer</p>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-start pb-1 mb-3">
+                    <a class="d-block flex-shrink-0" href="#"
+                      ><img
+                        class="rounded"
+                        src="img/demo/food-blog/posts/th/03.jpg"
+                        alt="Post"
+                        width="64"
+                    /></a>
+                    <div class="ps-2 ms-1">
+                      <h4 class="fs-md nav-heading mb-1">
+                        <a class="fw-medium" href="#"
+                          >Sugar-Free Coconut Yogurt with Mango</a
+                        >
+                      </h4>
+                      <p class="fs-xs text-muted mb-0">by Amelie Mayer</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Tag cloud-->
+                <div class="widget mb-5">
+                  <h3 class="widget-title pb-1">Popular tags</h3>
+                  <a class="btn-tag me-2 mb-2" href="#">#bakery</a
+                  ><a class="btn-tag me-2 mb-2" href="#">#cookbook</a
+                  ><a class="btn-tag me-2 mb-2" href="#">#cuisine</a
+                  ><a class="btn-tag me-2 mb-2" href="#">#asian food</a
+                  ><a class="btn-tag me-2 mb-2" href="#">#tips</a
+                  ><a class="btn-tag me-2 mb-2" href="#">#recipe</a
+                  ><a class="btn-tag me-2 mb-2" href="#">#chef</a
+                  ><a class="btn-tag me-2 mb-2" href="#">#vegetarian</a>
+                </div>
+                <!-- Socials-->
+                <div class="mb-5">
+                  <h3 class="widget-title pb-1">Follow me</h3>
+                  <a
+                    class="btn-social bs-outline bs-facebook me-2 mb-2"
+                    href="#"
+                    ><i class="ai-facebook"></i></a
+                  ><a
+                    class="btn-social bs-outline bs-twitter me-2 mb-2"
+                    href="#"
+                    ><i class="ai-twitter"></i></a
+                  ><a
+                    class="btn-social bs-outline bs-instagram me-2 mb-2"
+                    href="#"
+                    ><i class="ai-instagram"></i></a
+                  ><a
+                    class="btn-social bs-outline bs-pinterest me-2 mb-2"
+                    href="#"
+                    ><i class="ai-pinterest"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+      <!-- Videos-->
+      <section class="container py-5 mb-4 my-sm-0 py-sm-6 py-md-7">
+        <h2 class="h1 text-center">New video recipes every Sunday</h2>
+        <p class="mx-auto mb-5 text-muted text-center" style="max-width: 600px">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae
+        </p>
+        <!-- Carousel-->
+        <div class="tns-carousel-wrapper">
+          <div
+            class="tns-carousel-inner"
+            data-carousel-options='{"navAsThumbnails": true, "controls": false, "responsive": {"0":{"items":1, "gutter": 16},"768":{"items":2, "gutter": 30}}}'
+          >
+            <!-- Carousel item-->
+            <div>
+              <div class="gallery">
+                <a
+                  class="gallery-item gallery-video rounded-3"
+                  href="https://www.youtube.com/watch?v=JzJsUW4xV7k&amp;ab_channel=HealthNutNutrition"
+                  data-sub-html='&lt;h6 class="fs-sm text-light"&gt;Gallery video caption&lt;/h6&gt;'
+                  ><img
+                    src="img/demo/food-blog/videos/01.jpg"
+                    alt="Gallery thumbnail"
+                  /><span class="gallery-caption"
+                    >Gallery video caption</span
+                  ></a
+                >
+              </div>
+            </div>
+            <!-- Carousel item-->
+            <div>
+              <div class="gallery">
+                <a
+                  class="gallery-item gallery-video rounded-3"
+                  href="https://www.youtube.com/watch?v=JzJsUW4xV7k&amp;ab_channel=HealthNutNutrition"
+                  data-sub-html='&lt;h6 class="fs-sm text-light"&gt;Gallery video caption&lt;/h6&gt;'
+                  ><img
+                    src="img/demo/food-blog/videos/02.jpg"
+                    alt="Gallery thumbnail"
+                  /><span class="gallery-caption"
+                    >Gallery video caption</span
+                  ></a
+                >
+              </div>
+            </div>
+            <!-- Carousel item-->
+            <div>
+              <div class="gallery">
+                <a
+                  class="gallery-item gallery-video rounded-3"
+                  href="https://www.youtube.com/watch?v=JzJsUW4xV7k&amp;ab_channel=HealthNutNutrition"
+                  data-sub-html='&lt;h6 class="fs-sm text-light"&gt;Gallery video caption&lt;/h6&gt;'
+                  ><img
+                    src="img/demo/food-blog/videos/03.jpg"
+                    alt="Gallery thumbnail"
+                  /><span class="gallery-caption"
+                    >Gallery video caption</span
+                  ></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About-->
+      <section class="container">
+        <div class="row align-items-center">
+          <div class="col-md-5 mb-md-0 mb-grid-gutter">
+            <img
+              class="rounded-3"
+              src="img/demo/food-blog/author.jpg"
+              alt="Amelie"
+            />
+          </div>
+          <div class="col-lg-6 offset-lg-1 col-md-7">
+            <h2 class="mb-2">Hi! I am Amelie</h2>
+            <h3 class="h6 mb-3 text-muted">
+              Amateur chef and creator of this blog
+            </h3>
+            <p class="mb-4 pb-2 text-muted">
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui
+              blanditiis praesentium voluptatum deleniti atque corrupti quos
+              dolores et quas molestias excepturi sint occaecati cupiditate non
+              provident, similique sunt in culpa qui officia deserunt mollitia
+              animi, id est laborum et dolorum fuga. Et harum quidem rerum
+              facilis est et expedita distinctio.
+            </p>
+            <a class="btn btn-primary" href="#">Get to know me better</a>
+          </div>
+        </div>
+      </section>
+      <!-- Instagram-->
+      <section class="container-fluid py-5 my-4 my-sm-0 pt-sm-6 pt-md-7">
+        <h2 class="mb-5 text-center">
+          Follow
+          <a
+            href="#"
+            class="d-inline-block p-2 bg-faded-primary rounded text-primary text-decoration-none"
+            >@amelie_chef</a
+          >
+          on Instagram
+        </h2>
+        <!-- Carousel-->
+        <div class="tns-carousel-wrapper">
+          <div
+            class="tns-carousel-inner"
+            data-carousel-options='{"navAsThumbnails": true, "controls": false, "responsive": {"0":{"items":2, "gutter": 15}, "576":{"items":3}, "768":{"items":4, "gutter": 30}, "992":{"items":5}, "1200":{"items":6}}}'
+          >
+            <!-- Carousel item-->
+            <div>
+              <img src="img/demo/food-blog/instagram/01.jpg" alt="01" />
+            </div>
+            <!-- Carousel item-->
+            <div>
+              <img src="img/demo/food-blog/instagram/02.jpg" alt="02" />
+            </div>
+            <!-- Carousel item-->
+            <div>
+              <img src="img/demo/food-blog/instagram/03.jpg" alt="03" />
+            </div>
+            <!-- Carousel item-->
+            <div>
+              <img src="img/demo/food-blog/instagram/04.jpg" alt="04" />
+            </div>
+            <!-- Carousel item-->
+            <div>
+              <img src="img/demo/food-blog/instagram/05.jpg" alt="05" />
+            </div>
+            <!-- Carousel item-->
+            <div>
+              <img src="img/demo/food-blog/instagram/06.jpg" alt="06" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer-->
+    <footer class="footer bg-dark pt-5 pt-md-6">
+      <div class="container pt-3 pb-0 pt-md-0 pb-md-3">
+        <div class="row mb-4">
+          <div class="col-md-4">
+            <div class="widget widget-light pb-2 mb-4">
+              <h4 class="widget-title">Contacts</h4>
+              <ul>
+                <li>
+                  <a class="widget-link" href="mailto:support@example.com"
+                    ><i class="ai-mail fs-lg me-2"></i
+                    >amelie.chef@example.com</a
+                  >
+                </li>
+                <li>
+                  <a class="widget-link" href="tel:9107848015"
+                    ><i class="ai-phone fs-lg me-2"></i>910-784-8015</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="widget widget-light pb-2 mb-4">
+              <h4 class="widget-title">Follow</h4>
+              <a
+                class="btn-social bs-outline bs-lg bs-light bs-facebook me-2"
+                href="#"
+                ><i class="ai-facebook"></i></a
+              ><a
+                class="btn-social bs-outline bs-lg bs-light bs-twitter me-2"
+                href="#"
+                ><i class="ai-twitter"></i></a
+              ><a
+                class="btn-social bs-outline bs-lg bs-light bs-instagram me-2"
+                href="#"
+                ><i class="ai-instagram"></i></a
+              ><a
+                class="btn-social bs-outline bs-lg bs-light bs-pinterest"
+                href="#"
+                ><i class="ai-pinterest"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="widget widget-light pb-3 mb-4">
+              <h4 class="widget-title">Subscribe and never miss a post!</h4>
+              <form
+                class="subscription-form validate"
+                action="https://studio.us12.list-manage.com/subscribe/post?u=c7103e2c981361a6639545bd5&amp;amp;id=29ca296126"
+                method="post"
+                name="mc-embedded-subscribe-form"
+                target="_blank"
+                novalidate
+              >
+                <div class="input-group flex-nowrap">
+                  <i
+                    class="ai-mail position-absolute top-50 translate-middle-y text-muted fs-base ms-3"
+                  ></i>
+                  <input
+                    class="form-control rounded-start"
+                    type="email"
+                    name="EMAIL"
+                    placeholder="Your email"
+                    required
+                  />
+                  <button
+                    class="btn btn-primary"
+                    type="submit"
+                    name="subscribe"
+                  >
+                    Subscribe*
+                  </button>
+                </div>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div
+                  style="position: absolute; left: -5000px"
+                  aria-hidden="true"
+                >
+                  <input
+                    class="subscription-form-antispam"
+                    type="text"
+                    name="b_c7103e2c981361a6639545bd5_29ca296126"
+                    tabindex="-1"
+                  />
+                </div>
+                <div class="form-text">
+                  *Subscribe to our newsletter to receive early discount offers,
+                  updates and new products info.
+                </div>
+                <div class="subscription-status"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <p class="fs-sm mb-3 order-md-1">
+          <span class="text-light opacity-50 me-1"
+            >&copy; All rights reserved. Made by</span
+          ><a
+            class="nav-link-style nav-link-light"
+            href="https://createx.studio/"
+            target="_blank"
+            rel="noopener"
+            >Createx Studio</a
+          >
+        </p>
+      </div>
+    </footer>
+    <!-- Sidebar toggle button-->
+    <button
+      class="btn btn-primary btn-sm sidebar-toggle"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#blog-sidebar"
+    >
+      <i class="ai-filter fs-base me-2"></i>Filters
+    </button>
+    <!-- Back to top button--><a
+      class="btn-scroll-top"
+      href="#top"
+      data-scroll
+      data-fixed-element
+      ><span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span
+      ><i class="btn-scroll-top-icon ai-arrow-up"> </i
+    ></a>
+    <!-- Vendor scrits: js libraries and plugins-->
+    <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="vendor/tiny-slider/dist/min/tiny-slider.js"></script>
+    <script src="vendor/lightgallery.js/dist/js/lightgallery.min.js"></script>
+    <script src="vendor/lg-video.js/dist/lg-video.min.js"></script>
+    <!-- Main theme script-->
+    <script src="js/theme.min.js"></script>
+  </body>
+</html>
