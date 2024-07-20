@@ -22,6 +22,19 @@
     <meta name="theme-color" content="#ffffff" />
     <!-- Page loading styles-->
     <style>
+      .bg-yellow {
+        background-color: #fcd733;
+      }
+
+      .navbar-sticky.navbar-stuck {
+        background-color: #fcd733 !important;
+      }
+
+      .btn-yellow {
+        background-color: #fcd733 !important;
+        color: white !important;
+      }
+
       .page-loading {
         position: fixed;
         top: 0;
@@ -132,10 +145,10 @@
       <!-- Navbar (Solid background + shadow)-->
       <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
       <header
-        class="header navbar navbar-expand-lg bg-warning navbar-shadow navbar-sticky"
+        class="header navbar navbar-expand-lg bg-yellow navbar-shadow navbar-sticky"
         data-scroll-header
       >
-        <div class="navbar-search bg-light">
+        <div class="navbar-search bg-yellow">
           <div class="container d-flex flex-nowrap align-items-center">
             <i class="ai-search fs-xl"></i>
             <input
@@ -220,7 +233,7 @@
         "
       >
         <button
-          class="btn btn-warning rounded-2"
+          class="btn btn-yellow rounded-2"
           style="margin-top: 230px; margin-left: 80px"
         >
           Ajukan Sekarang
@@ -290,7 +303,7 @@
               jaminan BPKB sepeda motor/mobil, dengan syarat mudah dan proses
               cepat.
             </p>
-            <a class="btn btn-warning" href="#">Hitung Simulasi Kalkulator</a>
+            <a class="btn btn-yellow" href="#">Hitung Simulasi Kalkulator</a>
           </div>
         </div>
       </section>
@@ -438,7 +451,7 @@
           <div
             class="col-lg-6 d-flex align-items-center text-end justify-content-end bg-faded-primary pe-4"
           >
-            <button class="btn btn-warning btn-lg">Ajukan Sekarang</button>
+            <button class="btn btn-yellow btn-lg">Ajukan Sekarang</button>
           </div>
         </div>
       </section>
@@ -447,116 +460,7 @@
 
       <section class="container py-5 mt-2 mt-sm-3 mt-md-4">
         <!-- Accordion -->
-        <div class="pb-lg-0 mb-4 mb-md-0">
-          <div class="accordion accordion-alt" id="industries">
-            <div class="accordion-item mb-n3 mb-lg-n2 mb-xl-1">
-              <h3 class="accordion-header">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-binded-content="#finance-img"
-                  data-bs-target="#finance"
-                  aria-expanded="false"
-                  aria-controls="finance"
-                >
-                  Simulasi Pinjaman Jaminan BPKB
-                </button>
-              </h3>
-              <div
-                class="accordion-collapse collapse"
-                id="finance"
-                data-bs-parent="#industries"
-                style=""
-              >
-                <div class="accordion-body">
-                  Sit purus platea nunc semper auctor integer semper et ac odio
-                  eget a lacus eu duis ante sed molestie varius tempus gravida
-                  libero pretium sit etiam morbi orci et vestibulum velit.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item mb-n3 mb-lg-n2 mb-xl-1">
-              <h3 class="accordion-header">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-binded-content="#tech-img"
-                  data-bs-target="#tech"
-                  aria-expanded="false"
-                  aria-controls="tech"
-                >
-                  Apa yang dimaksud dengan Kredit Multiguna Jasa?
-                </button>
-              </h3>
-              <div
-                class="accordion-collapse collapse"
-                id="tech"
-                data-bs-parent="#industries"
-              >
-                <div class="accordion-body">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Vestibulum posuere finibus dui, eget scelerisque ipsum
-                  suscipit nec. Praesent nec quam in ipsum ultricies ultricies
-                  et sagittis dui.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item mb-n3 mb-lg-n2 mb-xl-1">
-              <h3 class="accordion-header">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-binded-content="#medicine-img"
-                  data-bs-target="#medicine"
-                  aria-expanded="false"
-                  aria-controls="medicine"
-                >
-                  Ringkasan Informasi Produk dan Layanan Umum
-                </button>
-              </h3>
-              <div
-                class="accordion-collapse collapse"
-                id="medicine"
-                data-bs-parent="#industries"
-              >
-                <div class="accordion-body">
-                  Pellentesque habitant morbi tristique senectus et netus et
-                  malesuada fames ac turpis egestas. Mauris tincidunt imperdiet
-                  hendrerit. Fusce tortor turpis, facilisis ac efficitur eget.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item mb-n3 mb-lg-n2 mb-xl-1">
-              <h3 class="accordion-header">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-binded-content="#ecommerce-img"
-                  data-bs-target="#ecommerce"
-                  aria-expanded="false"
-                  aria-controls="ecommerce"
-                >
-                  Tata Cara Pengajuan
-                </button>
-              </h3>
-              <div
-                class="accordion-collapse collapse"
-                id="ecommerce"
-                data-bs-parent="#industries"
-              >
-                <div class="accordion-body">
-                  Curabitur dictum sodales aliquam. Etiam tortor augue, ultrices
-                  in efficitur sit amet, luctus dapibus magna. Vivamus eu lacus
-                  elementum, ultrices massa vitae, elementum lorem.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <h1 class="text-center">Section</h1>
       </section>
       <hr class="bg-darker" />
 
