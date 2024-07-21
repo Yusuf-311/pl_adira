@@ -228,7 +228,7 @@
       <!-- Page content-->
       <!-- Hero-->
       <section
-        class="container-fluid hero"
+        class="container-fluid hero d-none d-lg-block"
         style="
           background-image: url(images/adira_banner.jpg);
           background-size: auto;
@@ -239,12 +239,25 @@
       >
         <a href="https://api.whatsapp.com/send?phone=6281558444484&text=">
           <button
-            class="btn d-none d-lg-block btn-yellow rounded-2"
+            class="btn btn-yellow rounded-2"
             style="margin-top: 17%; margin-left: 5%"
           >
             Ajukan Sekarang
           </button>
         </a>
+      </section>
+
+      <section class="container d-md-none d-block px-0">
+        <img
+          class="d-block mx-auto mb-grid-gutter"
+          src="images/mobile_banner.jpg"
+          alt="Amelie Mayer"
+        />
+        <div class="mx-auto px-3 text-center" style="max-width: 500px">
+          <a href="https://api.whatsapp.com/send?phone=6281558444484&text=">
+            <button class="btn btn-yellow rounded-2">Ajukan Sekarang</button>
+          </a>
+        </div>
       </section>
 
       <!-- Section2 -->
@@ -331,6 +344,7 @@
           </div>
         </div>
       </section>
+
       <hr class="hr-darker" />
       <!-- Keunggulan Kami -->
       <section class="container-fluid py-3 my-4 my-sm-0">
@@ -1092,15 +1106,7 @@
         </p>
       </div>
     </footer>
-    <!-- Sidebar toggle button-->
-    <button
-      class="btn btn-primary btn-sm sidebar-toggle"
-      type="button"
-      data-bs-toggle="offcanvas"
-      data-bs-target="#blog-sidebar"
-    >
-      <i class="ai-filter fs-base me-2"></i>Filters
-    </button>
+
     <!-- Back to top button--><a
       class="btn-scroll-top"
       href="#top"
