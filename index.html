@@ -100,6 +100,11 @@
           transform: rotate(360deg);
         }
       }
+      @media only screen and (max-width: 600px) {
+        .hero {
+          height: 50vh !important;
+        }
+      }
     </style>
     <!-- Page loading scripts-->
     <script>
@@ -223,10 +228,10 @@
       <!-- Page content-->
       <!-- Hero-->
       <section
-        class="container-fluid"
+        class="container-fluid hero"
         style="
           background-image: url(images/adira_banner.jpg);
-          background-size: cover;
+          background-size: auto;
           background-repeat: no-repeat;
           background-position: top;
           height: 50vh;
@@ -234,32 +239,21 @@
       >
         <a href="https://api.whatsapp.com/send?phone=6281558444484&text=">
           <button
-            class="btn btn-yellow rounded-2"
-            style="margin-top: 230px; margin-left: 80px"
+            class="btn d-none d-lg-block btn-yellow rounded-2"
+            style="margin-top: 17%; margin-left: 5%"
           >
             Ajukan Sekarang
           </button>
         </a>
       </section>
-      <!-- Hero mobile-->
-      <section class="container d-md-none d-block px-0">
-        <img
-          class="d-block mx-auto mb-grid-gutter"
-          src="images/adira_banner.jpg"
-          alt="Amelie Mayer"
-        />
-        <div class="mx-auto px-3 text-center" style="max-width: 500px">
-          <h1 class="display-4 mb-4">Enjoy the new cookbook by Amelie Mayer</h1>
-          <a class="btn btn-primary" href="#book" data-scroll>Get the book</a>
-        </div>
-      </section>
+
       <!-- Section2 -->
-      <section class="container-fluid bg-faded-dark py-4 px-7">
-        <div class="row align-items-center px-7">
-          <div class="col-lg-6 mb-md-0 mb-grid-gutter px-7 pe-0">
+      <section class="container-fluid bg-faded-dark py-4 px-lg-7 px-0">
+        <div class="row align-items-center px-lg-7 px-5">
+          <div class="col-lg-6 mb-md-0 mb-grid-gutter px-lg-7 px-0 pe-0">
             <div
               id="carouselExampleAutoplaying"
-              class="carousel slide px-7"
+              class="carousel slide px-lg-7"
               data-bs-ride="carousel"
             >
               <div class="carousel-inner">
@@ -318,7 +312,7 @@
               </button>
             </div>
           </div>
-          <div class="col pe-7">
+          <div class="col pe-lg-7">
             <img
               src="images/sample_profile.jpg"
               class="rounded-circle"
@@ -1061,6 +1055,7 @@
               </ul>
             </div>
           </div>
+          <div class="col-4 d-sm-none d-lg-flex"></div>
           <div class="col-md-4">
             <div class="widget widget-light pb-2 mb-4">
               <h4 class="widget-title">Follow</h4>
